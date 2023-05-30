@@ -1,0 +1,181 @@
+conky.config = {
+xinerama_head = 1, -- альтернативный полезный параметр, поместит окно conky на 1 экран
+alignment = 'top_right', --позиция коньков на экране, top_left вверху слева, top_right (вверху справа), top_middle (вверху посередине), bottom_left (внизу слева), bottom_right (внизу справа), bottom_middle (внизу посередине), middle_left (слева по центру), middle_middle (по цетру), middle_right (справа по центру), или none
+background = false, --Если true, Conky будет запущен в фоне
+color1 = '06CD10', --зеленый
+color2 = 'FAFA04', --желтый
+color3 = 'F83504', --красный
+color4 = '06CD10', --зеленый подстветка снапшота, если сделан
+color5 = '000000', --черный цвет шрифта занятого объема на баре диска
+cpu_avg_samples = 4, --Количество замеров для усреднения значения нагрузки на процессор
+default_color = 'A7CDB8', -- цвет по умолчанию серо-белый
+default_shade_color = '000000', --Цвет тени от текста и границы
+double_buffer = true,--Использовать или нет расширение Xdbe (устраняет мерцание).Рекомендуется установить 'own_window = true', тогда буфер будет занимать меньше памяти
+draw_borders = false,--Включает отображение границы вокруг текста
+draw_graph_borders = true,--Включает отображение границы вокруг графиков
+draw_outline = false,--Включает отображение окантовки
+font = 'Droid Sans:size=8', --шрифт по умолчанию
+gap_x = 0,--Отступ в пикселах по горизонтали от края экрана, указанного в alignment
+gap_y = 0,--Отступ в пикселах по вертикали от края экрана, указанного в alignment
+lua_load = '/home/kostya/.conky/Conky_left_small_v3/conkysmall-v3-Manjaro/funk.lua', --Загрузить Lua скрипты, перечисленные через пробел
+lua_draw_hook_post = 'main',--Если задана, функция будет вызвана каждый раз после отрисовки окна. Требуется поддержка X. Принимает любые числа в качестве аргументов. Используйте этот hook для отрисовки вещей поверх того, что отображает Conky.Conky добавляет 'conky_' к названиям своих функций для предотвращения случайного вызовова неверной функции
+no_buffers = true,--Вычитать буфер (file system) из используемой памяти?
+maximum_width = 250,--Максимальная ширина окна
+override_utf8_locale = true,--Включение UTF8 независимо от локали системы. Требует XFT
+own_window = true,--Создавать собственное окно или нет
+own_window_class = 'Conky',--Вручную задать WM_CLASS, по умолчанию «Conky»
+own_window_colour = '142018',--При 'own_window_transparent no' задает цвет фона, по умолчанию черный.Задается либо шестнадцатеричным значением без «#», либо именным цветом (см. /usr/lib/X11/rgb.txt)
+own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',-- При 'own_window = true' используется для изменения отображения окна: undecorated, below, sticky-на все рабочие столы, skip_taskbar, skip_pager. При 'own_window_type = 'override'' этот параметр игнорируется. Используйте 'own_window_type = 'desktop'' как другой способ включить многие из этих функций
+own_window_argb_visual = true,--Включает полупрозрачность. Для корректной работы необходим композитный менеджер. При 'own_window_type = 'override'' этот параметр игнорируется
+own_window_argb_value = 150,--При 'own_window_argb_visual = true' задает уровень прозрачности фона, принимает значение от 0 (прозрачный) до 255 (непрозрачный)
+own_window_type ='normal',--При 'own_window = true' задает тип окна: normal, desktop, dock, panel или override, по умолчанию normal. desktop - окно без декораций, всегда видимо на рабочем столе, отсутствует в переключателе окон и панели задач. panel - так же как и панели резервирует место вдоль края рабочего стола, предотвращая перекрытие развернутыми на весь экран окнами. край выбирается на основании значения alignment. override - не управляется оконным менеджером. own_window_hints игнорируется. Полезно в некоторых ситуациях
+own_window_transparent = false,--Делает фон полностью прозрачным
+short_units = true,--Сокращать единицы измерения до одной буквы (kiB→k, GiB→G и так далее), по умолчанию 'false'
+---------------- Заполнить персональными настройками 
+template0 = 'Krasnodar/Krasnodar', -- '/Chukotka/Anadyr', Местоположение 
+template1 = '/mnt/sdb/sdb6/', --каталог устройства хранения, если нет оставить как есть
+template2 = '/dev/sdb6', -- устройство хранения, если нет оставить как есть
+template3 = '/dev/sda3', -- устройство с root дистрибутива
+template4 = '~/.conky/Conky_left_small_v3/conkysmall-v3-Manjaro/img/manj1.png', --иконка дистрибутива
+template5 = 'enp3s0', --проводной интерфейс можно посмотреть через ifconfig
+template6 = 'wlan0', --'wlp0s29u1u2', --'wlp2s0', --вай-фай интерфейс можно посмотреть через ifconfig
+template7 = '33x33', --размер иконки дистрибутива
+template8 = '208,15', --координаты иконки х,у
+template9 = 'FAFA04', --цвет графа io дисков
+------------------------------------
+total_run_times = 0,--Количество обновлений, после которых Conky выключится. 0 - работать постоянно
+update_interval = 1.0,--Интервал обновления в секундах
+uppercase = false,--Включите для отображения текста В ВЕРХНЕМ РЕГИСТРЕ
+use_spacer = 'none',--Добавляет пробелы вокруг некоторых обьектов для предотвращения смещения ими соседних вещей, может принимать значения:left, right или none, по умолчанию none. Помогает только при использовании моноширинного шрифта, например Bitstream Vera Sans Mono
+use_xft = true, --Включите для использования Xft
+xftalpha = 0.5,--Прозрачность Xft шрифтов, принимает значение от 0 до 1 включительно
+--xftfont = 'Droid Sans:size=8',--Шрифт Xft для использования
+};
+conky.text = [[
+#A7CDB8 --базовый серо-белый--color texeci
+#08C033 --зеленый--color4
+#06CD10 --зеленый--color1
+#AAA02D --желтый --color2
+#F83504 --красный--color3
+#000000 --черный --color5 -- цвет шрифта занятого объема на баре диска
+#template0 - Местоположение --путь до КАТАЛОГА снапшотов таймшифта
+#template1 - путь до КАТАЛОГА устройства usb для архивации /dev/sdbN
+#template2 - устройство usb для архивации /dev/sdbN
+#template3 - устройство на которое установлен дистрибутив
+#template4 - путь до КАТАЛОГА значков дистрибутива
+#template5 - сетевой интерфейс проводной можно посмотреть через ifconfig
+#template6 - сетевой интерфейс Wi-Fi можно посмотреть через ifconfig
+#template7 - размер значка дистрибутива
+#template8 - координаты значка дистрибутива 'по оси х, по оси y'
+#template9 - цвет графа i/o дисков
+#lua_draw_hook_pre = 'triger',
+#lua_draw_hook_pre = 'conky_triger',
+#lua_draw_hook_pre = 'main',
+#------системное
+${alignc}${font Android:bold:size=9}${texeci 108000 echo $(awk -F'=' '/^DISTRIB_ID=/ {print $2}' /etc/lsb-release) $(awk -F'=' '/^DISTRIB_CODENAME=/ {print $2}' /etc/lsb-release)}${font Android 7:bold:size=10} ${texeci 54000 echo $(lsb_release -rs) }
+#-------значок дистрибутива
+${voffset -20}${image ${template4} -p ${template8} -s ${template7}}
+#--------------------------
+${voffset 5}${goto 35}${font Cadillac Sans:size=8}$kernel на $machine
+${goto 35}Установлена: ${texeci 108000 echo $(ls --time-style +"%H:%M %d.%m.%Y" -clt / | tail -n 1 | awk '{ print $7,"в", $6}')}
+#${goto 35}Компьютер: $nodename
+#echo $DESKTOP_SESSION - работает в xfce и fluxbox ; $SESSION - ; $XDG_SESSION_DESKTOP - работает в xfce и fluxbox ;  $XDG_CURRENT_DESKTOP - ; $GDMSESSION - работает в xfce и fluxbox ;  $MDMSESSION - ;
+${goto 35}$GDMSESSION в работе: $uptime_short 
+#${goto 35}Доступно обновлений: ${texeci 10800 echo $(pamac checkupdates -a | head -n 1 | grep Доступно | awk '{ print $2 }')}
+#${goto 35}В том числе системы: ${texeci 10800 echo $(pamac checkupdates --no-aur | head -n 1 | grep обновлен | awk '{ print $2 }')}
+#-------------------------------------- Дата и время Asia/Anadyr
+${voffset -7}${hr}
+${goto 25}${font Cadillac Sans:size=10}${tztime Europe/Moscow %A: %e %B %Y}${voffset 0}
+${goto 65}${font dot matrix:size=12}${tztime Europe/Moscow %H:%M:%S}${font}${voffset -18}${goto 220}${font Poky:size=15}d${font}
+#--------------------------------------CPU
+${voffset -0}${hr}
+${voffset -3}${goto 8}${font Cadillac Sans:size=9}Загрузка CPU»${goto 100}${cpu}% / $freq_g GHz
+${goto 15}${font}CPU1: ${cpu cpu1}% ${goto 130}CPU2: ${cpu cpu2}%
+${voffset -25}${if_match ${cpu}<30}${color}${else}${if_match ${cpu}>70}${color3}${else}${color2}${endif}${endif}${goto 220}${font Style Bats:size=18}E${font}${voffset -8}${color}
+${voffset 10}${if_match ${cpu cpu1}<30}${color}${else}${if_match ${cpu cpu1}>70}${color3}${else}${color2}${endif}${endif}${goto 15}${cpubar cpu1 7,110}${color}${goto 130}${if_match ${cpu cpu2}<30}${color}${else}${if_match ${cpu cpu2}>70}${color3}${else}${color2}${endif}${endif}${cpubar cpu2 7,110}${voffset -0}${color}${voffset -2}
+${goto 15}${font}CPU3: ${cpu cpu3}% ${goto 130}CPU4: ${cpu cpu4}%
+${goto 15}${if_match ${cpu cpu3}<30}${color}${else}${if_match ${cpu cpu3}>70}${color3}${else}${color2}${endif}${endif}${cpubar cpu3 7,110}${color}${goto 130}${if_match ${cpu cpu4}<30}${color}${else}${if_match ${cpu cpu4}>70}${color3}${else}${color2}${endif}${endif}${cpubar cpu4 7,110}${color}${if_match ${acpitemp}<60}${color}${else}${if_match ${acpitemp}>80}${color3}${else}${color2}${endif}${endif}${voffset -12}${goto 180}${texeci 10 sensors | grep "cpu_fan" | cut -b12-18}Об/м${color}
+${voffset 10}${goto 15}${cpugraph cpu0 20,110 A7CDB8 F83504 -t -l}${goto 130}${loadgraph 20,110 A7CDB8 F83504 -t -l}
+${voffset -25}${goto 60}CPU ${goto 160}Система
+${voffset 5}${goto 20}Нагрузка на систему ${loadavg}${if_match ${acpitemp}<60}${color}${else}${if_match ${acpitemp}>80}${color3}${else}${color2}${endif}${endif}${goto 215}${acpitemp}°C ${color}
+#-------------------------------------ОЗУ и SWAP
+${voffset -9}${hr}
+${voffset -5}${if_match ${memperc}<50}${color}${else}${if_match ${memperc}>80}${color3}${else}${color2}${endif}${endif}${goto 220}${font Poky:size=18}M${font}${color}
+${voffset -27}${goto 5}${font Cadillac Sans:size=9}Занято»${goto 55}ОЗУ:  ${memperc}% ${goto 140}SWAP:  ${swapperc}%${font}
+${goto 35}${font}${if_match ${memperc} == 0}${buffers}${else}${mem}${endif}/${memmax}${goto 135}${swap}/${swapmax}${font}
+${if_match ${memperc}<50}${color}${else}${if_match ${memperc}>80}${color3}${else}${color2}${endif}${endif}${goto 15}${membar 7,110}${color}${if_match ${swapperc}<50}${color}${else}${if_match ${swapperc}>80}${color3}${else}${color2}${endif}${endif}${goto 130}${swapbar 7,110}${voffset -0}${color}
+${goto 15}${font}Резерв ${memeasyfree}  (Буфер: ${buffers}  Кэш: ${cached})
+#------------------------------------Диски --------------------------
+${voffset -9}${hr}
+${voffset -4}${font Cadillac Sans:size=9}Диски»${font}${goto 58}I/O R: ${diskio_read}${goto 140}I/O W: ${diskio_write}${goto 223}${voffset 4}${if_match "${texeci 600 find ${template1}/timeshift/snapshots -mindepth 1 -maxdepth 1 -name $(date +%F)* -printf '%P\n' | sort -r | head -n 1}"==""}${color}${else}${color4}${endif}${voffset -3}${font Style Bats:size=18}A${font}${color}
+#----Тригер обнаружения запуска подпроцесса rsync процесса timeshift с помощью lua функций - РАБОТАЕТ ОТКЛЮЧЕН -------
+#${if_running timeshift}${if_running rsync}${if_match ${lua d} > 0}${color4}${endif}${endif}${else}${if_match ${lua c} > 0}${color4}${else}${color}${endif}${endif}${font Style Bats:size=18}A${font}${color}
+#-------------------------------------
+#ниже exclude=/home/kostya/cloud исключен из подсчета размера /home облачный монтируемый ресурс
+${voffset -12}${goto 15}/: ${fs_size /} /home: ${texeci 600 du -sch /home --exclude=/home/kostya/cloud | head -n1 | awk '{print $1}'}${goto 130}${template2}: ${fs_size ${template1}}
+${voffset 2}${goto 15}${fs_bar 12,110 /}${goto 17}${color5}${fs_used /}${color}${goto 93}${fs_free /}${goto 130}${fs_bar 12,110 ${template1}}${goto 132}${color5}${fs_used ${template1}}${color}${goto 208}${fs_free ${template1}}
+${voffset 4}${goto 10}${font Cadillac Sans:size=9}${goto 60}Read${font}${if_match ${texeci 600 test -e ${template1}/timeshift/snapshots;echo $?}==0}${goto 132}${texeci 600 find ${template1}/timeshift/snapshots -mindepth 1 -maxdepth 1 -name $(date --date='2 days ago' +%F)* -type d -printf '%P\n' | sort -r | head -n 1}${endif}${color}${goto 15}${font}${voffset -7}${diskiograph_read ${template3} 20,110 A7CDB8 ${template9} -t}${goto 130}${diskiograph_read ${template2} 20,110 A7CDB8 ${template9} -t}${voffset -10}
+${voffset 7}${goto 10}${font Cadillac Sans:size=9}${goto 60}Write${font}${if_match ${texeci 600 test -e ${template1}/timeshift/snapshots;echo $?}==0}${goto 132}${texeci 600 find ${template1}/timeshift/snapshots -mindepth 1 -maxdepth 1 -name $(date --date='1 days ago' +%F)* -type d -printf '%P\n' | sort -r | head -n 1}${endif}${color}${goto 15}${font}${voffset -7}${diskiograph_write ${template3} 20,110 A7CDB8 ${template9} -t}${goto 130}${diskiograph_write ${template2} 20,110 A7CDB8 ${template9} -t}
+#-------------------- Дата последнего снапшота таймшифтом ----------------
+${voffset -5}${if_match ${texeci 60 test -e ${template1}/timeshift/snapshots;echo $?}==0}${goto 25}Последний бэкап: ${texeci 60 find ${template1}/timeshift/snapshots -mindepth 1 -maxdepth 1 -printf '%P\n' | sort -r | head -n 1}${else}${goto 15}${color3}Примонтируй внешний USB для timeshift${color}${endif}
+#------------------------------Батарея---------------------------
+${voffset -8}${hr}
+${voffset -4}${font Cadillac Sans:size=9}Аккумулятор»${font}${if_match ${battery_percent}>70}${color}${else}${if_match ${battery_percent}>30}${color2}${else}${color3}${endif}${endif}   ${battery_time}   ${battery}${goto 230}${texeci 600 upower -i $(upower -e | grep battery_BAT0) | grep -A0 percentage | awk '{print $2}'}
+${goto 15}${battery_bar 7,200}${goto 220}${voffset -5}${font Poky:size=14}${if_match ${battery_percent}>90}T${else}${if_match ${battery_percent}>65}R${else}${if_match ${battery_percent}>39}E${else}${if_match ${battery_percent}>15}W${else}Q${endif}${endif}${endif}${endif}${color}${voffset -17}
+#${voffset 0}${font Cadillac Sans:size=9}Заряд мыши»${font}${goto 115}${texeci 600 upower -i $(upower -e | grep mouse) | grep -A0 percentage | awk '{print $2}'}
+${voffset 0}${font Cadillac Sans:size=9}Заряд мыши»${font}${goto 115}${texeci 600 upower -i $(upower -e | grep battery_hidpp_battery_) | grep -A0 percentage | awk '{print $2}'}
+#-------------------------------Сеть ---------------------
+${if_existing /proc/net/route ${template5}}${voffset -9}${hr}${voffset -3}
+#VPN: ${texeci 15 windscribe status | tail -n 1}
+${font Cadillac Sans:size=9}Сети»${goto 50}Интернет:${goto 110}${font}${texeci 60 wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'}${goto 220}${font Poky:size=14}w${font}
+${voffset -15}${goto 50}Локалка:${font}${goto 110}${addr ${template5}}
+${goto 100}Скорость${goto 180}Всего
+${goto 15}Загрузка:${goto 110}${downspeedf ${template5}}/s${goto 180}${totaldown ${template5}}
+${goto 15}Отправка:${goto 110}${upspeed ${template5}}/s${goto 180}${totalup ${template5}}${voffset -8}${else}${voffset -23}${endif}
+#------------------Wi-Fi------------------------
+${if_existing /proc/net/route ${template6}}${hr}${voffset -3}
+#VPN: ${texeci 15 windscribe status | tail -n 1}
+${font Cadillac Sans:size=9}Сети»${goto 50}Интернет:${goto 110}${font}${texeci 60 wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'}${goto 220}${font Poky:size=14}Y${font}
+${voffset -15}${goto 50}Wi-Fi:${font}${goto 110}${addr ${template6}}
+${goto 15}Имя     : ${wireless_essid ${template6}}${goto 140}Режим: ${wireless_mode ${template6}}
+${if_match ${wireless_link_qual_perc ${template6}} > 69}${color}${else}${if_match ${wireless_link_qual_perc ${template6}} > 39}${color2}${else}${color3}${endif}${endif}${goto 15}${wireless_link_bar 7,225,${template6}}${goto 60}${color5}Качество сигнала ${wireless_link_qual_perc ${template6}}% ${color}
+${goto 15}${wireless_bitrate ${template6}}${goto 70}${font Cadillac Sans:size=8}<------ ${font}Скорость${goto 180}Всего
+${goto 15}Загрузка:${goto 110}${downspeed ${template6}}/s${goto 180}${totaldown ${template6}}
+${goto 15}Отправка:${goto 110}${upspeed ${template6}}/s${goto 180}${totalup ${template6}}${voffset -16}${else}${voffset -23}${endif}
+#----------------------------------Процессы
+${voffset 8}${hr}
+${voffset -2}${font Cadillac Sans:size=9}Процессы»${font}${goto 80}Всего процессов: $processes${voffset -12}
+${goto 220}${font Conky Symbols:size=15}L${voffset -20}
+${goto 80}${font}В т.ч. Активных: $running_processes${voffset -0}
+${goto 20}${font Cadillac Sans:size=9}------${goto 50}Топ  CPU ---- ${goto 130}PID${goto 165}ОЗУ%${goto 210}CPU%${font}
+${if_match ${cpu}<30}${color}${else}${if_match ${cpu}>70}${color3}${else}${color2}${endif}${endif}${goto 15}1.${goto 25}${top name 1}${goto 115}${top pid 1}${goto 163}${top mem 1}${goto 207}${top cpu 1}
+${if_match ${cpu}<30}${color}${else}${if_match ${cpu}>70}${color3}${else}${color2}${endif}${endif}${goto 15}2.${goto 25}${top name 2}${goto 115}${top pid 2}${goto 163}${top mem 2}${goto 207}${top cpu 2}
+${if_match ${cpu}<30}${color}${else}${if_match ${cpu}>70}${color3}${else}${color2}${endif}${endif}${goto 15}3.${goto 25}${top name 3}${goto 115}${top pid 3}${goto 163}${top mem 3}${goto 207}${top cpu 3}
+${color}${goto 15}4.${goto 25}${top name 4}${goto 115}${top pid 4}${goto 163}${top mem 4}${goto 207}${top cpu 4}
+${goto 15}5.${goto 25}${top name 5}${goto 115}${top pid 5}${goto 163}${top mem 5}${goto 207}${top cpu 5}${if_match ${cpu}>80}
+${goto 15}6.${goto 25}${top name 6}${goto 115}${top pid 6}${goto 163}${top mem 6}${goto 207}${top cpu 6}
+${goto 15}7.${goto 25}${top name 7}${goto 115}${top pid 7}${goto 163}${top mem 7}${goto 207}${top cpu 7}
+${goto 15}8.${goto 25}${top name 8}${goto 115}${top pid 8}${goto 163}${top mem 8}${goto 207}${top cpu 8}
+${goto 15}9.${goto 25}${top name 9}${goto 115}${top pid 9}${goto 163}${top mem 9}${goto 207}${top cpu 9}${endif}
+${goto 20}${font Cadillac Sans:size=9}-------${goto 50} Топ  ОЗУ ----${goto 130}PID${goto 165}ОЗУ%${goto 210}CPU%${font}
+${if_match ${memperc}<50}${color}${else}${if_match ${memperc}>80}${color3}${else}${color2}${endif}${endif}${goto 15}1.${goto 25}${top_mem name 1}${goto 115}${top_mem pid 1}${goto 163}${top_mem mem 1}${goto 207}${top_mem cpu 1}
+${if_match ${memperc}<50}${color}${else}${if_match ${memperc}>80}${color3}${else}${color2}${endif}${endif}${goto 15}2.${goto 25}${top_mem name 2}${goto 115}${top_mem pid 2}${goto 163}${top_mem mem 2}${goto 207}${top_mem cpu 2}
+${if_match ${memperc}<50}${color}${else}${if_match ${memperc}>80}${color3}${else}${color2}${endif}${endif}${goto 15}3.${goto 25}${top_mem name 3}${goto 115}${top_mem pid 3}${goto 163}${top_mem mem 3}${goto 207}${top_mem cpu 3}
+${color}${goto 15}4.${goto 25}${top_mem name 4}${goto 115}${top_mem pid 4}${goto 163}${top_mem mem 4}${goto 207}${top_mem cpu 4}
+${goto 15}5.${goto 25}${top_mem name 5}${goto 115}${top_mem pid 5}${goto 163}${top_mem mem 5}${goto 207}${top_mem cpu 5}${if_match ${memperc}>80}
+${goto 15}6.${goto 25}${top_mem name 6}${goto 115}${top_mem pid 6}${goto 163}${top_mem mem 6}${goto 207}${top_mem cpu 6}
+${goto 15}7.${goto 25}${top_mem name 7}${goto 115}${top_mem pid 7}${goto 163}${top_mem mem 7}${goto 207}${top_mem cpu 7}
+${goto 15}8.${goto 25}${top_mem name 8}${goto 115}${top_mem pid 8}${goto 163}${top_mem mem 8}${goto 207}${top_mem cpu 8}
+${goto 15}9.${goto 25}${top_mem name 9}${goto 115}${top_mem pid 9}${goto 163}${top_mem mem 9}${goto 207}${top_mem cpu 9}${endif}
+#----------------------------- I/O ------------------------------------
+${goto 20}${font Cadillac Sans:size=9}------${goto 50}Топ  I/O ------${goto 130}PID${goto 170}IO%${goto 205}WRITE${font}
+${goto 15}1.${goto 25}${top_io name 1}${goto 115}${top_io pid 1}${goto 163}${top_io io_perc 1}${goto 210}${top_io io_write 1}
+${goto 15}2.${goto 25}${top_io name 2}${goto 115}${top_io pid 2}${goto 163}${top_io io_perc 2}${goto 210}${top_io io_write 2}
+${goto 15}3.${goto 25}${top_io name 3}${goto 115}${top_io pid 3}${goto 163}${top_io io_perc 3}${goto 210}${top_io io_write 3}
+${goto 15}4.${goto 25}${top_io name 4}${goto 115}${top_io pid 4}${goto 163}${top_io io_perc 4}${goto 210}${top_io io_write 4}
+${goto 15}5.${goto 25}${top_io name 5}${goto 115}${top_io pid 5}${goto 163}${top_io io_perc 5}${goto 210}${top_io io_write 5}
+#------------------------конец--------------------------------------------
+${voffset -7}${hr}
+${if_existing /proc/net/route ${template6}}${voffset -90}${else}${if_existing /proc/net/route ${template5}}${voffset -90}${else}${voffset -70}${endif}${endif}
+]];
+
