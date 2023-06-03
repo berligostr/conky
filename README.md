@@ -14,4 +14,5 @@
 #template9 - цвет графа i/o дисков
 
 
-[![screenshot](conky/jobclamscan.png)](conky/jobclamscan.png)
+[![screenshot](https://github.com/berligostr/conky/blob/master/conky.png)](https://github.com/berligostr/conky/blob/master/conky.png)
+
