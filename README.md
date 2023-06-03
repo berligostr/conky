@@ -14,5 +14,5 @@
 #template9 - цвет графа i/o дисков
 
 
-[![screenshot](https://github.com/berligostr/conky/blob/master/conky.png)](https://github.com/berligostr/conky/blob/master/conky.png)
+[![screenshot](https://github.com/berligostr/conky/blob/master/conky.png)](https://github.com/berligostr/conky/blob/master/conky.png) [![screenshot](https://github.com/berligostr/conky/blob/master/conky.png)](https://github.com/berligostr/conky/blob/master/conky.png) [![screenshot](https://github.com/berligostr/conky/blob/master/conky.png)](https://github.com/berligostr/conky/blob/master/conky.png)
 
