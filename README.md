@@ -12,3 +12,6 @@
 #template7 - размер значка дистрибутива
 #template8 - координаты значка дистрибутива 'по оси х, по оси y'
 #template9 - цвет графа i/o дисков
+
+
+[![screenshot](conky/jobclamscan.png)](conky/jobclamscan.png)
