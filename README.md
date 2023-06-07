@@ -15,4 +15,5 @@
 
 
 [![screenshot](https://github.com/berligostr/conky/blob/master/conky.png)](https://github.com/berligostr/conky/blob/master/conky.png) [![screenshot](https://github.com/berligostr/conky/blob/master/jobtimeshift.png)](https://github.com/berligostr/conky/blob/master/jobtimeshift.png) [![screenshot](https://github.com/berligostr/conky/blob/master/jobclamscan.png)](https://github.com/berligostr/conky/blob/master/jobclamscan.png)
+[![screenshot](https://github.com/berligostr/conky/blob/master/pacjob.png)](https://github.com/berligostr/conky/blob/master/pacjob.png) [![screenshot](https://github.com/berligostr/conky/blob/master/pamacjob.png)](https://github.com/berligostr/conky/blob/master/pamacjob.png)
 
